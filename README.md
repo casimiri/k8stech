@@ -2,7 +2,7 @@
 
 ## Agenda
 * What are containers?
-  * Build an image
+  * [Build an image](/buildImage/BuildDockerImage.md)
   * Run a container
 * What is container orchestration?
   * Kubernetes
