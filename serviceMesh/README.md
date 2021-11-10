@@ -1,33 +1,5 @@
 # Service Mesh
 
-## Install Linkerd
-
-### Linkerd installation
-```
-curl -fsL https://run.linkerd.io/install | sh
-```
-```
-export PATH=$PATH:/Users/kz/.linkerd2/bin
-```
-```
-linkerd version
-```
-You should see the CLI version, and also Server version: unavailable. 
-
-### Step 2 Validate K8s cluster
-```
-linkerd check --pre
-```
-### Step 3 Install linkerd control plane
-
-```
-linkerd install | kubectl apply -f -
-```
-```
-linkerd check
-```
- 
-
 ## Install ISTIO
 ### 1. Install istio cli
 ```
@@ -68,3 +40,33 @@ kubectl -n istio-bookinfo apply -f samples/bookinfo/networking/bookinfo-gateway.
 ```
 istioctl -n istio-bookinfo analyze
 ```
+
+
+## Install Linkerd
+
+### Linkerd installation
+```
+curl -fsL https://run.linkerd.io/install | sh
+```
+```
+export PATH=$PATH:/Users/kz/.linkerd2/bin
+```
+```
+linkerd version
+```
+You should see the CLI version, and also Server version: unavailable. 
+
+### Step 2 Validate K8s cluster
+```
+linkerd check --pre
+```
+### Step 3 Install linkerd control plane
+
+```
+linkerd install | kubectl apply -f -
+```
+```
+linkerd check
+```
+ 
+
