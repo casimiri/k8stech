@@ -11,7 +11,7 @@ Then let navigate to the directory BlazorServerApp
 ```
 cd BlazorServerApp
 ```` 
-## Create a multi-stage container image
+## Create a container image
 1) Create the .dockerignore file
 2) Create the Dockerfile (multi-stage: build and run)
 3) Show Container image 
