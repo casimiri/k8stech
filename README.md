@@ -17,6 +17,7 @@
   * Service
   * ConfigMap and Secret
   * Ingress
+  * [Demo](/deployment/README.md)
 * Service Mesh
   * Traffic split
   * Observability
