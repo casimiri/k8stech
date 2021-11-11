@@ -1,33 +1,5 @@
 # Service Mesh
 
-## Install Linkerd
-
-### Linkerd installation
-```
-curl -fsL https://run.linkerd.io/install | sh
-```
-```
-export PATH=$PATH:/Users/kz/.linkerd2/bin
-```
-```
-linkerd version
-```
-You should see the CLI version, and also Server version: unavailable. 
-
-### Step 2 Validate K8s cluster
-```
-linkerd check --pre
-```
-### Step 3 Install linkerd control plane
-
-```
-linkerd install | kubectl apply -f -
-```
-```
-linkerd check
-```
- 
-
 ## Install ISTIO
 ### 1. Install istio cli
 ```
@@ -99,3 +71,32 @@ istioctl dashboard kiali
 ```
 for i in $(seq 1 100); do curl -s -o /dev/null "http://$GATEWAY_URL/productpage"; done
 ```
+
+## Install Linkerd
+
+### Linkerd installation
+```
+curl -fsL https://run.linkerd.io/install | sh
+```
+```
+export PATH=$PATH:/Users/kz/.linkerd2/bin
+```
+```
+linkerd version
+```
+You should see the CLI version, and also Server version: unavailable. 
+
+### Step 2 Validate K8s cluster
+```
+linkerd check --pre
+```
+### Step 3 Install linkerd control plane
+
+```
+linkerd install | kubectl apply -f -
+```
+```
+linkerd check
+```
+ 
+

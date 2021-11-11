@@ -2,6 +2,7 @@
 
 ## Agenda
 * What are containers?
+  * Container Frameworks, Docker intro
   * [Build an image](/buildImage/README.md)
   * Run a container
 * What is container orchestration?
@@ -16,6 +17,7 @@
   * Service
   * ConfigMap and Secret
   * Ingress
+  * [Demo](/deployment/README.md)
 * Service Mesh
   * Traffic split
   * Observability
