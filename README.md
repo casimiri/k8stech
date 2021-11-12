@@ -20,13 +20,13 @@
   * StatefulSet
   * Ingress
   * [Demo](/deployment/README.md)
-* Service Mesh
+* Helm
+* [GitOps](/gitOps/)
+* [Service Mesh](/serviceMesh/)
   * Traffic management
   * Observability
+* [Serverless](/serverLess/)
 * What next?
-  * Helm/Customize
-  * GitOps
-  * Serverless
   * OAM
   * Platforms
     * On Premise (Tanzu, OpenShift, Kubeadm etc.)
