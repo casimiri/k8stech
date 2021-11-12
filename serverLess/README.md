@@ -26,7 +26,7 @@ kubectl --namespace istio-system get service istio-ingressgateway
 ### Verify
 ```
 kubectl get pods -n knative-serving
-``
+```
 
 ### Configure DNS (Magic DNS with sslip.io)
 ```
@@ -35,7 +35,7 @@ kubectl apply -f https://github.com/knative/serving/releases/download/knative-v1
 ### Install HPA (Horizontal Pod Autoscaling) (Optional)
 ```
 kubectl apply -f https://github.com/knative/serving/releases/download/knative-v1.0.0/serving-hpa.yaml
-``
+```
 
 ## Install first knative app
 ```
