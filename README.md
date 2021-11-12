@@ -12,7 +12,7 @@
   * Nomad
   * Cloud Foundry
 * Kubernetes Architecture
-* Deployment to Kubernetes
+* Basic Kubernetes resources
   * Pods deployment
   * Service
   * ConfigMap and Secret
