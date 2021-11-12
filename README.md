@@ -21,10 +21,8 @@
   * Ingress
   * [Demo](/deployment/README.md)
 * Service Mesh
-  * Traffic split
+  * Traffic management
   * Observability
-* Security 
-  
 * What next?
   * Helm/Customize
   * GitOps
