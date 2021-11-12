@@ -16,13 +16,15 @@
   * Pods deployment
   * Service
   * ConfigMap and Secret
+  * Network Policy
+  * StatefulSet
   * Ingress
   * [Demo](/deployment/README.md)
 * Service Mesh
   * Traffic split
   * Observability
 * Security 
-  * Network Policy
+  
 * What next?
   * Helm/Customize
   * GitOps
