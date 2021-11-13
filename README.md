@@ -12,21 +12,21 @@
   * Nomad
   * Cloud Foundry
 * Kubernetes Architecture
-* Deployment to Kubernetes
+* Basic Kubernetes resources
   * Pods deployment
   * Service
   * ConfigMap and Secret
+  * Network Policy
+  * StatefulSet
   * Ingress
   * [Demo](/deployment/README.md)
-* Service Mesh
-  * Traffic split
+* Helm
+* [GitOps](/gitOps/)
+* [Service Mesh](/serviceMesh/)
+  * Traffic management
   * Observability
-* Security 
-  * Network Policy
+* [Serverless](/serverLess/)
 * What next?
-  * Helm/Customize
-  * GitOps
-  * Serverless
   * OAM
   * Platforms
     * On Premise (Tanzu, OpenShift, Kubeadm etc.)
