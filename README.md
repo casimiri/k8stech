@@ -6,11 +6,6 @@
   * [Build an image](/buildImage/README.md)
   * Run a container
 * What is container orchestration?
-  * Kubernetes
-  * Docker Swarm
-  * Mesosphere
-  * Nomad
-  * Cloud Foundry
 * Kubernetes Architecture
 * Basic Kubernetes resources
   * Pods deployment
