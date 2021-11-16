@@ -8,12 +8,6 @@
 * What is container orchestration?
 * Kubernetes Architecture
 * Basic Kubernetes resources
-  * Pods deployment
-  * Service
-  * ConfigMap and Secret
-  * Network Policy
-  * StatefulSet
-  * Ingress
   * [Demo](/deployment/README.md)
 * Helm
 * [GitOps](/gitOps/)
