@@ -1,10 +1,7 @@
 # Introduction to Kubernetes: Containers orchestration
 
 ## Agenda
-* What are containers?
-  * Container Frameworks, Docker intro
-  * [Build an image](/buildImage/README.md)
-  * Run a container
+* [What are containers?](/buildImage/README.md)
 * What is container orchestration?
 * Kubernetes Architecture
 * Basic Kubernetes resources
