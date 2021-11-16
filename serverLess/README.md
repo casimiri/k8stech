@@ -1,6 +1,6 @@
 # OpenFaaS
 ## Install arkade
-````
+```
 curl -sLS https://get.arkade.dev | sudo sh
 ```
 
