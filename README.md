@@ -4,8 +4,7 @@
 * [What are containers?](/buildImage/README.md)
 * What is container orchestration?
 * Kubernetes Architecture
-* Basic Kubernetes resources
-  * [Demo](/deployment/README.md)
+* [Basic Kubernetes resources](/deployment/README.md)
 * [CI/CD with Kubernetes](/gitOps/)
 * [Canary Deployment](/serviceMesh/)
 * [Serverless](/serverLess/)
