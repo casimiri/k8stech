@@ -6,15 +6,9 @@
 * Kubernetes Architecture
 * Basic Kubernetes resources
   * [Demo](/deployment/README.md)
-* Helm
-* [GitOps](/gitOps/)
-* [Service Mesh](/serviceMesh/)
-  * Traffic management
-  * Observability
+* [CI/CD with Kubernetes](/gitOps/)
+* [Canary Deployment](/serviceMesh/)
 * [Serverless](/serverLess/)
 * What next?
-  * OAM
-  * Platforms
-    * On Premise (Tanzu, OpenShift, Kubeadm etc.)
-    * Managed (AKS, GCP, EKS, DigitalOcean, Linode etc.)
+
 
