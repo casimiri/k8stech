@@ -1,3 +1,8 @@
+# CI/CD in Kubernetes
+1. Use a tool like Azure DevOps for CI (build the container image, tag and push to Image registry)
+2. Use a tool like Azure DevOps to update a Deployment Git repository
+3. use a GitOps tool to reconcile changes in the Deployment Git repository and the Application.
+
 # GitOps with ArgoCD
 ## Install ArgoCD
 ```
