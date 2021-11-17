@@ -19,6 +19,13 @@ kubectl delete pod myapp
 kubectl create deploy appdeploy --image nginx --replicas=1  --dry-run=client -o yaml > app-deploy.yaml
 kubectl apply -f app-deploy.yaml
 kubectl get deploy
+kubectl scale deploy appdeploy --replicas 5
+kubectl scale deploy appdeploy --replicas 2
+```
+## Service
+```
+kubectl expose appdeploy --type IPCluster --dry-run=client -o yaml > app-service.yaml
+kubectl apply -f app-service.yaml
 ```
 
 ## Container Image
