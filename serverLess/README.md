@@ -1,3 +1,28 @@
+# OpenFaaS
+## Install arkade
+```
+curl -sLS https://get.arkade.dev | sudo sh
+```
+
+## Install OpenFaaS with arkade
+```
+arkade install openfaas
+```
+### Get the faas-cli
+```
+curl -SLsf https://cli.openfaas.com | sudo sh
+```
+### Forward Gateway port to local machine
+```
+kubectl port-forward -n openfaas svc/gateway 8080:8080 &
+```
+### If basic auth is enabled, you can now log into your gateway:
+PASSWORD=$(kubectl get secret -n openfaas basic-auth -o jsonpath="{.data.basic-auth-password}" | base64 --decode; echo)
+echo -n $PASSWORD | faas-cli login --username admin --password-stdin
+
+### e.g Figlet App
+faas-cli store deploy figlet
+
 # Knative
 ## Install knative cli
 ```

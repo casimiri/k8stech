@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    run: myapp
+  name: myapp
+spec:
+  containers:
+  - image: rinaahm/k8s_demo:v1
+    name: myapp
+    ports:
+    - containerPort: 80
