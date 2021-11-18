@@ -16,7 +16,7 @@ cd BlazorServerApp
 2) Create the Dockerfile (multi-stage: build and run)
 3) Show Container image 
 4) Run and connect to container
-5) Create and build 1 stage container (run with SDK)
+5) Create and build single stage container (run with SDK)
 6) Show image size in images
 
 
@@ -30,7 +30,7 @@ RUN dotnet restore "SGISapp.csproj"
 COPY . .
 RUN dotnet publish "SGISapp.csproj" -c Release -o /app/publish
 
-FROM mcr.microsoft.com/dotnet/nightly/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /app/publish
 EXPOSE 80
 EXPOSE 443
