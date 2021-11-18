@@ -44,13 +44,13 @@ ENTRYPOINT ["dotnet", "REPLACE_WITH_NAME.dll"]
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /app
 COPY *.csproj .
-RUN dotnet restore "SGISapp.csproj"
+RUN dotnet restore *.csproj
 COPY . .
-RUN dotnet publish "SGISapp.csproj" -c Release -o /app/publish
+RUN dotnet publish *.csproj -c Release -o /app/publish
 
 WORKDIR /app/publish
 EXPOSE 80
 EXPOSE 443
 
-ENTRYPOINT ["dotnet", "SGISapp.dll"]
+ENTRYPOINT ["dotnet", "techsparkapp.dll"]
 ```
