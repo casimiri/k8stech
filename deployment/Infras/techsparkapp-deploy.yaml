@@ -15,5 +15,5 @@ spec:
         app: techsparkapp
     spec:
       containers:
-      - image: rinaahm/techsparkapp:v2
+      - image: rinaahm/techsparkapp:v7
         name: techsparkapp
