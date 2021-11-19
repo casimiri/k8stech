@@ -3,4 +3,4 @@ data:
   URL: db
 kind: ConfigMap
 metadata:
-  name: DBUrl
+  name: dburl
