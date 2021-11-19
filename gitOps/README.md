@@ -4,6 +4,32 @@
 3. use a GitOps tool to reconcile changes in the Deployment Git repository and the Application.
 
 # GitOps with ArgoCD
+
+# Get the ArgoCD CLI
+arkade install argocd
+
+# Port-forward the ArgoCD API server
+kubectl port-forward svc/argocd-server -n argocd 8443:443 &
+
+# Get the password
+PASS=$(kubectl get secret argocd-initial-admin-secret \
+  -n argocd \
+  -o jsonpath="{.data.password}" | base64 -d)
+echo $PASS
+
+# Or log in:
+argocd login --name local 127.0.0.1:8443 --insecure \
+ --username admin \
+ --password $PASS
+
+# Open the UI:
+https://127.0.0.1:8443
+
+# Get started with ArgoCD at
+# https://argoproj.github.io/argo-cd/#quick-start
+
+
+
 ## Install ArgoCD
 ```
 kubectl create namespace argocd
