@@ -27,6 +27,17 @@ kubectl scale deploy appdeploy --replicas 2
 kubectl expose appdeploy --type IPCluster --dry-run=client -o yaml > app-service.yaml
 kubectl apply -f app-service.yaml
 ```
+## Ingress Controller
+```
+helm repo add ingress-nginx https://kubernetes.github.io/ingress-nginx
+helm repo update
+helm install ingress-nginx ingress-nginx/ingress-nginx
+```
+## Ingress
+```
+kubectl apply -f ingress-app.yaml
+kubectl get ingress
+```
 
 ## Container Image
 

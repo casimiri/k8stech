@@ -2,18 +2,18 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app: appdeploy
-  name: appdeploy
+    app: techsparkapp
+  name: techsparkapp-deploy
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: appdeploy
+      app: techsparkapp
   template:
     metadata:
       labels:
-        app: appdeploy
+        app: techsparkapp
     spec:
       containers:
-      - image: nginx
-        name: nginx
+      - image: rinaahm/techsparkapp:v1
+        name: techsparkapp
