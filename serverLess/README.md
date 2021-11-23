@@ -23,6 +23,18 @@ echo -n $PASSWORD | faas-cli login --username admin --password-stdin
 ### e.g Figlet App
 faas-cli store deploy figlet
 
+### Template
+```
+faas-cli template store list
+faas-cli template store pull csharp
+faas-cli new  kzapi2 --lang csharp
+```
+### Build image
+Edit the yaml file to prefix with the docker registry
+
+sudo faas-cli publish -f kzapi2.yml --platforms linux/amd64
+
+
 # Knative
 ## Install knative cli
 ```
