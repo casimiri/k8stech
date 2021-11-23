@@ -37,6 +37,7 @@ sudo faas-cli publish -f kzapi2.yml --platforms linux/amd64
 ### Install Metrics Server
 ```
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+```
 
 # Knative
 ## Install knative cli
