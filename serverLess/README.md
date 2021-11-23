@@ -35,8 +35,10 @@ Edit the yaml file to prefix with the docker registry
 sudo faas-cli publish -f kzapi2.yml --platforms linux/amd64
 ```
 ### Install Metrics Server
+https://artifacthub.io/packages/helm/metrics-server/metrics-server
 ```
-kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
+helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
+helm upgrade --install metrics-server metrics-server/metrics-server
 ```
 
 # Knative
