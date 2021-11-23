@@ -31,7 +31,7 @@ faas-cli new  kzapi2 --lang csharp
 ```
 ### Build image
 Edit the yaml file to prefix with the docker registry
-
+```
 sudo faas-cli publish -f kzapi2.yml --platforms linux/amd64
 
 
