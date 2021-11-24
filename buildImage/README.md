@@ -52,5 +52,5 @@ WORKDIR /app/publish
 EXPOSE 80
 EXPOSE 443
 
-ENTRYPOINT ["dotnet", "techsparkapp.dll"]
+ENTRYPOINT ["dotnet", "REPLACE_WITH_NAME.dll", "--urls", "http://0.0.0.0"]
 ```

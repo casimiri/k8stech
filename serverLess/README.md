@@ -23,6 +23,25 @@ echo -n $PASSWORD | faas-cli login --username admin --password-stdin
 ### e.g Figlet App
 faas-cli store deploy figlet
 
+### Template
+```
+faas-cli template store list
+faas-cli template store pull csharp
+faas-cli new  kzapi2 --lang csharp
+```
+### Build image & Deploy
+Edit the yaml file to prefix with the docker registry
+```
+sudo faas-cli publish -f kzapi2.yml --platforms linux/amd64
+faas-cli deploy --image compaorec/kzapi2:latest --name kzapi3 --label com.openfaas.scale.min=2 --label com.openfaas.scale.max=5 --label com.openfaas.scale.zero=true
+```
+### Install Metrics Server
+https://artifacthub.io/packages/helm/metrics-server/metrics-server
+```
+helm repo add metrics-server https://kubernetes-sigs.github.io/metrics-server/
+helm upgrade --install metrics-server metrics-server/metrics-server
+```
+
 # Knative
 ## Install knative cli
 ```
