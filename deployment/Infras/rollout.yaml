@@ -10,7 +10,7 @@ spec:
       stableService: rollouts-demo-stable
       trafficRouting:
         nginx:
-          stableIngress: minimal-ingress #rollouts-demo-stable
+          stableIngress: minimal-ingress
       steps:
       - setWeight: 5
       - pause: {}
