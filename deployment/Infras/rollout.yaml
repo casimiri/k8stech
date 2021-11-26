@@ -14,6 +14,12 @@ spec:
       steps:
       - setWeight: 5
       - pause: {}
+      - setWeight: 40
+      - pause: {}
+      - setWeight: 60
+      - pause: {}
+      - setWeight: 80
+      - pause: {}
   revisionHistoryLimit: 2
   selector:
     matchLabels:
