@@ -10,16 +10,6 @@ metadata:
     nginx.ingress.kubernetes.io/affinity: cookie
 spec:
   rules:
-  - host: test.compaore.me
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: rollouts-demo-stable
-            port: 
-              number: 80
   - host: app.compaore.me
     http:
       paths:
