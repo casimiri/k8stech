@@ -20,13 +20,4 @@ spec:
             name: appservice
             port:
               number: 80
-  - host: wp.compaore.me
-    http:
-      paths:
-      - pathType: Prefix
-        path: "/"
-        backend:
-          service:
-            name: wordpress
-            port:
-              number: 80
+  
