@@ -6,13 +6,12 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-  - host: wp.compaore.me
+  - host: wordpress.compaore.me
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
-          # Reference to a Service name, also specified in the Rollout spec.strategy.canary.stableService field
           service:
             name: wordpress
             port:
