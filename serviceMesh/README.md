@@ -1,3 +1,45 @@
+# Canary deployment
+## Install argo rollouts
+### Install argo rollout CRDs and Controllers
+```
+kubectl create namespace argo-rollouts
+kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
+```
+### Install argo rollouts kubectl plugin
+```
+brew install argoproj/tap/kubectl-argo-rollouts
+```
+
+### Deploy initial rollout and service
+```
+kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/basic/rollout.yaml
+kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/basic/service.yaml
+```
+### To watch the rollout 
+```
+kubectl argo rollouts get rollout rollouts-demo --watch
+```
+### Updating a rollout
+```
+kubectl argo rollouts set image rollouts-demo \
+  rollouts-demo=argoproj/rollouts-demo:yellow
+```
+### Manually Promoting a rollout
+```
+kubectl argo rollouts promote rollouts-demo
+```
+### Aborting a rollout
+```
+kubectl argo rollouts set image rollouts-demo \
+  rollouts-demo=argoproj/rollouts-demo:red
+
+kubectl argo rollouts abort rollouts-demo
+
+# to make the status Healthy instead of Degraded
+kubectl argo rollouts set image rollouts-demo \
+  rollouts-demo=argoproj/rollouts-demo:yellow
+```
+
 # Service Mesh
 
 ## Install ISTIO
@@ -75,46 +117,6 @@ watch -n 1 curl -o /dev/null -s -w %{http_code} "http://$GATEWAY_URL/productpage
 
 ```
 for i in $(seq 1 100); do curl -s -o /dev/null "http://$GATEWAY_URL/productpage"; done
-```
-## Install argo rollouts
-### Install argo rollout CRDs and Controllers
-```
-kubectl create namespace argo-rollouts
-kubectl apply -n argo-rollouts -f https://github.com/argoproj/argo-rollouts/releases/latest/download/install.yaml
-```
-### Install argo rollouts kubectl plugin
-```
-brew install argoproj/tap/kubectl-argo-rollouts
-```
-
-### Deploy initial rollout and service
-```
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/basic/rollout.yaml
-kubectl apply -f https://raw.githubusercontent.com/argoproj/argo-rollouts/master/docs/getting-started/basic/service.yaml
-```
-### To watch the rollout 
-```
-kubectl argo rollouts get rollout rollouts-demo --watch
-```
-### Updating a rollout
-```
-kubectl argo rollouts set image rollouts-demo \
-  rollouts-demo=argoproj/rollouts-demo:yellow
-```
-### Manually Promoting a rollout
-```
-kubectl argo rollouts promote rollouts-demo
-```
-### Aborting a rollout
-```
-kubectl argo rollouts set image rollouts-demo \
-  rollouts-demo=argoproj/rollouts-demo:red
-
-kubectl argo rollouts abort rollouts-demo
-
-# to make the status Healthy instead of Degraded
-kubectl argo rollouts set image rollouts-demo \
-  rollouts-demo=argoproj/rollouts-demo:yellow
 ```
 
 ## Install Flagger
