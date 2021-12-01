@@ -1,19 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: minimal-ingress
+  name: wp-ingress
   annotations:
     kubernetes.io/ingress.class: nginx
-    nginx.ingress.kubernetes.io/proxy-read-timeout: "4000"
 spec:
   rules:
-  - host: app.compaore.me
+  - host: wordpress.compaore.me
     http:
       paths:
-      - pathType: Prefix
-        path: "/"
+      - path: /
+        pathType: Prefix
         backend:
           service:
-            name: appservice
+            name: wordpress
             port:
               number: 80

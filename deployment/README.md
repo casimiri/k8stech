@@ -38,6 +38,16 @@ helm install ingress-nginx ingress-nginx/ingress-nginx
 kubectl apply -f ingress-app.yaml
 kubectl get ingress
 ```
+## Config Map
+```
+kubectl create cm dburl --from-literal URL=db --dry-run=client -o yaml >configMap.yaml
+kubectl apply -f configMap.yaml
+```
+## Secret
+```
+kubectl create secret generic pwdsecret --from-literal password=1234 --dry-run=client -o yaml > secret.yaml
+```
+
 
 ## Container Image
 

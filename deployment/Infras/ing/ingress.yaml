@@ -1,0 +1,23 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: minimal-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "4000"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "4000"
+    nginx.org/websocket-services: "appservice"
+    nginx.ingress.kubernetes.io/affinity: cookie
+spec:
+  rules:
+  - host: app.compaore.me
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: appservice
+            port:
+              number: 80
+  

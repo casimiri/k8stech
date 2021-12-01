@@ -1,0 +1,11 @@
+version: 1.0
+provider:
+  name: openfaas
+  gateway: http://127.0.0.1:8080
+functions:
+  kzapi2:
+    lang: csharp
+    handler: ./kzapi2
+    image: compaorec/kzapi2:latest
+    requests:
+      cpu: 10m

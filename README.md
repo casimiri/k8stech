@@ -10,4 +10,11 @@
 * [Serverless](/serverLess/)
 * What next?
 
+### Official Web sites
+
+* https://kubernetes.io/docs/home/
+* https://argoproj.github.io
+* https://docs.openfaas.com
+* https://learn.shipa.io/docs
+* https://tanzucommunityedition.io/docs/latest/
 
