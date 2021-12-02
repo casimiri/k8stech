@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: mssql
+  name: mssql
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mssql
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: mssql
+    spec:
+      containers:
+      - image: mcr.microsoft.com/mssql/server:2019-latest
+        name: server
+        ports:
+        - containerPort: 1433
+        env:
+        - name: ACCEPT_EULA
+          value: "Y"
+        - name: SA_PASSWORD
+          value: Pa@@w0rd
